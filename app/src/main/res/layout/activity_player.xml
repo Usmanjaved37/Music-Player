@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:weightSum="5"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Player_Activity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="12dp"
+            android:id="@+id/imgSongAnim"
+            android:fitsSystemWindows="true"
+            android:src="@drawable/images"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="0.00"
+    android:id="@+id/tv_ss"
+    android:padding="4dp"
+    android:gravity="bottom"
+    android:textColor="@color/white"/>
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="200dp"
+            android:layout_height="17dp"
+            android:progressTint="#fff"
+            android:layout_marginLeft="10dp"
+            android:progressBackgroundTint="@color/white"
+            android:layout_marginRight="10dp"
+            android:padding="12dp"
+            android:thumbTint="#fff" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4.00"
+        android:id="@+id/tv_tds"
+        android:padding="4dp"
+        android:gravity="bottom"
+        android:textColor="@color/white"/>
+
+</LinearLayout>
+
+        <TextView
+
+            android:id="@+id/tv_playerSongName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="4sp"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="Song Name"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+
+            <ImageView
+                android:id="@+id/previous"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/previous" />
+
+            <ImageView
+                android:id="@+id/pause"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/previous"
+                android:src="@drawable/pause" />
+
+            <ImageView
+                android:id="@+id/next"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/pause"
+                android:src="@drawable/next" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:background="@drawable/ic_launcher_foreground"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_weight="3"-->
+<!--        >-->
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:gravity="bottom"-->
+<!--        android:layout_weight="1">-->
+
+<!--<SeekBar-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_marginLeft="12sp"-->
+<!--    android:layout_marginBottom="12sp"-->
+<!--    android:layout_marginRight="12sp"-->
+<!--    android:progressBackgroundTint="@color/white"-->
+<!--    android:id="@+id/seekbar"-->
+<!--    />-->
+
+
+
+<!--    </LinearLayout>-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_weight="1"-->
+<!--        >-->
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="12sp"-->
+<!--            android:layout_marginRight="12sp"-->
+<!--            android:textColor="#E5EAEA"-->
+<!--            android:textSize="17sp"-->
+<!--            android:text="Song,s Name are Display Here"-->
+<!--            android:padding="4dp"-->
+<!--            android:textAlignment="center"-->
+<!--            android:singleLine="true"-->
+<!--            android:scrollHorizontally="true"-->
+<!--            android:ellipsize="marquee"-->
+<!--            android:marqueeRepeatLimit="marquee_forever"-->
+<!--            android:id="@+id/tv_PlayerSongName"/>-->
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="#000000"-->
+<!--        android:gravity="center"-->
+<!--        >-->
+<!--        <ImageView-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_width="50sp"-->
+<!--            android:layout_height="50sp"-->
+<!--            android:src="@drawable/previous"-->
+<!--            android:id="@+id/img_Previous"-->
+<!--            app:tint="@color/white" />-->
+<!--        <ImageView-->
+<!--            android:layout_width="50sp"-->
+<!--            android:layout_height="50sp"-->
+<!--            android:layout_marginLeft="20sp"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_toEndOf="@+id/img_Previous"-->
+<!--            android:src="@drawable/pause"-->
+<!--            android:id="@+id/img_Pause"-->
+<!--            app:tint="@color/white" />-->
+<!--        <ImageView-->
+<!--            android:layout_width="50sp"-->
+<!--            android:layout_height="50sp"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_marginLeft="20sp"-->
+<!--            android:layout_toEndOf="@+id/img_Pause"-->
+<!--            android:src="@drawable/next"-->
+<!--            android:id="@+id/img_Next"/>-->
+<!--    </RelativeLayout>-->
+<!--    </LinearLayout>-->
+
+</LinearLayout>
